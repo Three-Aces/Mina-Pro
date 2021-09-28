@@ -1,5 +1,4 @@
 from django.shortcuts import render, redirect
-from django.http import HttpResponse
 from django.template import loader
 from django.contrib.auth.forms import UserCreationForm
 from .forms import CreateUserForm
@@ -23,7 +22,7 @@ def register(request):
                 return redirect('login')
 
         context = {'form': form}
-        return render(request, 'wining/register.html', context)
+        return render(request, 'tombora/register.html', context)
 
 
 def loginPage(request):
@@ -43,7 +42,7 @@ def loginPage(request):
             else:
                 messages.info(request, 'Username Or Password is Incorrect')
 
-        return render(request, 'wining/login.html')
+        return render(request, 'tombora/login.html')
 
 
 def logOutUser(request):
@@ -56,5 +55,5 @@ def logOutUser(request):
 def homePage(request):
 
     context = {}
-    return render(request, 'wining/index.html', context)
+    return render(request, 'tombora/index.html', context)
 
