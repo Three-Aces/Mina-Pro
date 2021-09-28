@@ -1,6 +1,6 @@
 from django.apps import AppConfig
 
 
-class WiningConfig(AppConfig):
+class TomboraConfig(AppConfig):
     default_auto_field = 'django.db.models.BigAutoField'
-    name = 'wining'
+    name = 'tombora'
