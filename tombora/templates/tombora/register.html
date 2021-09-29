@@ -27,17 +27,19 @@
     <section class="s1">
         <div class="main-container">
             <h3 style="text-align: center;">Register Here</h3>
-            <form method="POST" action="" id="contact-form">
+            <form method="POST">
                 {% csrf_token %}
-                {% for field in form %}
-                    {{field.label}}
-                    {{field}}<br><br>
-                {% endfor %}
-                <input type="submit" name="Create User" id="submit-btn">
+                <input type="text" name="firstname" placeholder="First Name"><br><br>
+                <input type="text" name="lastname" placeholder="Second Name"><br><br>
+                <input type="text" name="username" placeholder="User Name"><br><br>
+                <input type="text" name="email" placeholder="E-mail"><br><br>
+                <input type="password" name="password1" placeholder="Create Password"><br><br>
+                <input type="password" name="password2" placeholder="Re-type Password"><br><br>
+                <input type="submit"  value="register">
             </form>
             {{form.errors}}
             <p>
-                already have an account?
+                already have an account? <a href="{% url 'tombora:login' %}">Login here</a>
             </p>
         </div>
     </section>
