@@ -33,7 +33,7 @@
 
                 <form class="mx-1 mx-md-4" method="post">
 {#                    {% csrf_token %}#}
-                <form action="" method="POST" id="contact-form">
+                <form action="{% url 'tombora:login' %}" method="POST" id="contact-form">
                 {% csrf_token %}
                 <label for="">
 
@@ -131,7 +131,7 @@
 {#    <section class="s1">#}
 {#        <div class="main-container">#}
 {#            <h3 style="text-align: center;">Login</h3>#}
-{#            <form action="" method="POST" id="contact-form">#}
+{#            <form action="{% url 'tombora:login' %}" method="POST" id="contact-form">#}
 {#                {% csrf_token %}#}
 {#                <label for="">#}
 {#                    User Name#}
